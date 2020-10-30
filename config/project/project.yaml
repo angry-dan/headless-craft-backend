@@ -1,0 +1,17 @@
+dateModified: 1604009574
+email:
+  fromEmail: craft@example.com
+  fromName: '0 0 0'
+  transportType: craft\mail\transportadapters\Sendmail
+system:
+  edition: pro
+  live: true
+  name: '0 0 0'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

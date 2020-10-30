@@ -1,0 +1,26 @@
+enableVersioning: true
+handle: blog
+name: Blog
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  bdeeb2b8-9904-43f2-82eb-5c643ebb161b:
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: 'blog/{slug}'
+structure:
+  maxLevels: null
+  uid: 8d39d2a1-f948-4924-9d08-3ca4971409fd
+type: structure

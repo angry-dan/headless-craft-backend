@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  mysql:
+    image: mariadb:10.5
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: craft
+      MYSQL_USER: craft
+      MYSQL_PASSWORD: craft
+    volumes:
+      - ./.persist/mysql:/var/lib/mysql:delegated
+    networks:
+      - default
+
+  php:
+    build: ./
+    environment:
+      DB_HOST: mysql
+      DB_USER: craft
+      DB_PASSWORD: craft
+      DB_NAME: craft
+    volumes:
+      - ./:/var/www/html:cached
+      - ./local.php.ini:/usr/local/etc/php/conf.d/local.php.ini
+
+    command: "php -S 0.0.0.0:80"
+    working_dir: /var/www/html/web
+    ports:
+      - "1000:80"
+    networks:
+      - default

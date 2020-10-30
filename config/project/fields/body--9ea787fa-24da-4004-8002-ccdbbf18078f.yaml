@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 5a4a1eff-d078-4ada-bca2-5ad8eb13d5ea
+handle: body
+instructions: ''
+name: Body
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_body}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
